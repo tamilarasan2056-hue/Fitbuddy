@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dumbbell, Sparkles, Shield, User, Menu, X, Activity } from 'lucide-react';
+import { Dumbbell, Sparkles, Shield, Menu, X, Activity } from 'lucide-react';
 
 interface NavbarProps {
   currentView: 'home' | 'dashboard' | 'comparison' | 'admin';
@@ -24,7 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full glass-panel border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 border-b border-slate-200 shadow-sm backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -32,19 +32,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => handleNav('home')}
           >
-            <div className="w-10 h-10 rounded-xl bg-lime-500 flex items-center justify-center shadow-lg shadow-lime-500/20 group-hover:scale-105 transition-transform duration-200">
-              <Dumbbell className="w-5 h-5 text-slate-950 stroke-[2.5]" />
+            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200">
+              <Dumbbell className="w-5 h-5 text-white stroke-[2.5]" />
             </div>
             <div>
               <div className="flex items-center space-x-1.5">
-                <span className="font-heading font-black text-xl tracking-tight text-white">
-                  FIT<span className="text-lime-400">BUDDY</span>
+                <span className="font-heading font-black text-xl tracking-tight text-slate-950">
+                  FIT<span className="text-blue-600">BUDDY</span>
                 </span>
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-lime-500/10 text-lime-400 border border-lime-500/20">
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200">
                   <Sparkles className="w-2.5 h-2.5 mr-0.5" /> AI
                 </span>
               </div>
-              <p className="text-[10px] text-slate-400 -mt-0.5 hidden sm:block">Powered by Gemini</p>
+              <p className="text-[10px] text-slate-500 -mt-0.5 hidden sm:block">Powered by Gemini</p>
             </div>
           </div>
 
@@ -52,10 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="hidden md:flex items-center space-x-2">
             <button
               onClick={() => handleNav('home')}
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                 currentView === 'home'
-                  ? 'bg-slate-800/90 text-white border border-slate-700/60 shadow-inner'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
+                  ? 'bg-blue-50 text-blue-700 font-semibold border border-blue-200'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
               Plan Generator
@@ -65,22 +65,22 @@ export const Navbar: React.FC<NavbarProps> = ({
               <>
                 <button
                   onClick={() => handleNav('dashboard')}
-                  className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-1.5 ${
+                  className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-1.5 cursor-pointer ${
                     currentView === 'dashboard'
-                      ? 'bg-slate-800/90 text-lime-400 border border-lime-500/30'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
+                      ? 'bg-blue-50 text-blue-700 font-semibold border border-blue-200'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  <Activity className="w-4 h-4 text-lime-400" />
+                  <Activity className="w-4 h-4 text-blue-600" />
                   <span>My Workout Plan</span>
                 </button>
 
                 <button
                   onClick={() => handleNav('comparison')}
-                  className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                     currentView === 'comparison'
-                      ? 'bg-slate-800/90 text-emerald-400 border border-emerald-500/30'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
+                      ? 'bg-blue-50 text-blue-700 font-semibold border border-blue-200'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
                   Compare Plans
@@ -90,10 +90,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={onAdminClick}
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-1.5 ${
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-1.5 cursor-pointer ${
                 currentView === 'admin'
-                  ? 'bg-slate-800/90 text-amber-400 border border-amber-500/30'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
               <Shield className="w-4 h-4" />
@@ -101,17 +101,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Quick CTA or Mobile Toggle */}
+          {/* Status Indicator */}
           <div className="flex items-center space-x-3">
-            <div className="hidden sm:flex items-center space-x-2 text-xs text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <div className="hidden sm:flex items-center space-x-2 text-xs text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 font-medium">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
               <span>Gemini 2.5 Active</span>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 focus:outline-none"
+              className="md:hidden p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 focus:outline-none"
               aria-label="Toggle navigation"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -122,11 +122,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-slate-800/60 bg-slate-950/95 backdrop-blur-xl">
+        <div className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-slate-200 bg-white">
           <button
             onClick={() => handleNav('home')}
             className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium ${
-              currentView === 'home' ? 'bg-slate-800 text-lime-400' : 'text-slate-300'
+              currentView === 'home' ? 'bg-blue-50 text-blue-700 font-semibold' : 'text-slate-700'
             }`}
           >
             Plan Generator
@@ -136,7 +136,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 onClick={() => handleNav('dashboard')}
                 className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium ${
-                  currentView === 'dashboard' ? 'bg-slate-800 text-lime-400' : 'text-slate-300'
+                  currentView === 'dashboard' ? 'bg-blue-50 text-blue-700 font-semibold' : 'text-slate-700'
                 }`}
               >
                 My Workout Plan
@@ -144,7 +144,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 onClick={() => handleNav('comparison')}
                 className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium ${
-                  currentView === 'comparison' ? 'bg-slate-800 text-emerald-400' : 'text-slate-300'
+                  currentView === 'comparison' ? 'bg-blue-50 text-blue-700 font-semibold' : 'text-slate-700'
                 }`}
               >
                 Compare Plans
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onAdminClick();
             }}
             className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium flex items-center space-x-2 ${
-              currentView === 'admin' ? 'bg-slate-800 text-amber-400' : 'text-slate-400'
+              currentView === 'admin' ? 'bg-slate-900 text-white' : 'text-slate-700'
             }`}
           >
             <Shield className="w-4 h-4" />

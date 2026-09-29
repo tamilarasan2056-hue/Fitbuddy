@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, MessageSquare, Send, RefreshCw, CheckCircle, AlertCircle } from 'lucide-react';
+import { Sparkles, MessageSquare, RefreshCw } from 'lucide-react';
 
 interface FeedbackPanelProps {
   onSubmitFeedback: (feedback: string) => void;
@@ -34,16 +34,16 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
   };
 
   return (
-    <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl my-8">
+    <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-md my-8 text-slate-900">
       <div className="flex items-center space-x-3 mb-3">
-        <div className="w-9 h-9 rounded-xl bg-lime-500 flex items-center justify-center text-slate-950 shadow-md shadow-lime-500/20">
+        <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
           <MessageSquare className="w-4 h-4 stroke-[2.5]" />
         </div>
         <div>
-          <h3 className="font-heading font-black text-xl text-white">
+          <h3 className="font-heading font-black text-xl text-slate-950">
             Improve & Adapt My Plan with AI
           </h3>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-600">
             Provide feedback or adjustments. FitBuddy will regenerate a revised 7-day schedule while keeping your original plan archived.
           </p>
         </div>
@@ -51,7 +51,7 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
 
       {/* Suggestion Chips */}
       <div className="my-4">
-        <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+        <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider block mb-2">
           Quick Modification Suggestions:
         </span>
         <div className="flex flex-wrap gap-2">
@@ -60,7 +60,7 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
               key={idx}
               type="button"
               onClick={() => handleApplySuggestion(s)}
-              className="text-xs px-3 py-1.5 rounded-lg bg-slate-900/90 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-all cursor-pointer"
+              className="text-xs px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 hover:text-blue-700 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all cursor-pointer font-medium"
             >
               + {s}
             </button>
@@ -76,7 +76,7 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
             placeholder="Tell Gemini what to adjust (e.g. 'Please replace lunges with step-ups and add 10 mins of core work each session')..."
-            className="w-full p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-lime-500 transition-colors"
+            className="w-full p-4 rounded-xl bg-slate-50 border border-slate-300 text-slate-950 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-600 focus:bg-white transition-colors"
           />
           <div className="flex justify-between text-[11px] text-slate-500 mt-1">
             <span>Minimum 3 characters</span>
@@ -84,23 +84,24 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
           </div>
         </div>
 
+        {/* Submit button: Blue Button */}
         <button
           type="submit"
           disabled={feedback.trim().length < 3 || isRegenerating}
           className={`w-full sm:w-auto px-6 py-3 rounded-xl font-heading font-bold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer ${
             feedback.trim().length < 3 || isRegenerating
-              ? 'bg-slate-800 text-slate-500 cursor-not-allowed'
-              : 'bg-lime-500 text-slate-950 hover:bg-lime-400 shadow-lg shadow-lime-500/20'
+              ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
+              : 'bg-blue-600 text-white hover:bg-blue-700 shadow-md shadow-blue-500/20'
           }`}
         >
           {isRegenerating ? (
             <>
-              <RefreshCw className="w-4 h-4 animate-spin text-slate-950" />
+              <RefreshCw className="w-4 h-4 animate-spin text-white" />
               <span>Regenerating Revised Plan with Gemini...</span>
             </>
           ) : (
             <>
-              <Sparkles className="w-4 h-4 text-slate-950" />
+              <Sparkles className="w-4 h-4 text-white" />
               <span>Regenerate Plan with Feedback</span>
             </>
           )}

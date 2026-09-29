@@ -138,7 +138,7 @@ export function App() {
     : null;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#07090e] text-slate-100">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900">
       {/* Toast Alert System */}
       <Toast toasts={toasts} onDismiss={removeToast} />
 
