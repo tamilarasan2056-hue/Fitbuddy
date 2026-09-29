@@ -336,7 +336,7 @@ export const FitnessForm: React.FC<FitnessFormProps> = ({ onSubmit, isLoading })
               className={`w-full py-4 rounded-xl font-heading font-black text-base tracking-wide flex items-center justify-center space-x-3 transition-all duration-200 cursor-pointer ${
                 isLoading
                   ? 'bg-slate-800 text-slate-500 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-lime-500 via-emerald-400 to-teal-400 text-slate-950 hover:from-lime-400 hover:to-teal-300 shadow-xl shadow-lime-500/25 hover:shadow-lime-500/40 hover:-translate-y-0.5'
+                  : 'bg-lime-500 text-slate-950 hover:bg-lime-400 shadow-xl shadow-lime-500/20 hover:-translate-y-0.5'
               }`}
             >
               <Sparkles className="w-5 h-5 text-slate-950" />

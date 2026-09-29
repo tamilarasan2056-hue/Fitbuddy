@@ -13,7 +13,7 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ profile, onReset
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         {/* User Identity */}
         <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-lime-500 to-emerald-400 flex items-center justify-center text-slate-950 font-black text-lg shadow-md shadow-lime-500/20">
+          <div className="w-12 h-12 rounded-xl bg-lime-500 flex items-center justify-center text-slate-950 font-black text-lg shadow-md shadow-lime-500/20">
             {profile.username ? profile.username.charAt(0).toUpperCase() : 'U'}
           </div>
           <div>

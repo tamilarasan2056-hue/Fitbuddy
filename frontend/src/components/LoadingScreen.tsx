@@ -43,7 +43,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ customMessage }) =
         <div className="relative mx-auto w-24 h-24 mb-8 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full border-2 border-lime-500/20 animate-ping" />
           <div className="absolute inset-2 rounded-full border border-lime-400/40 animate-spin-slow" />
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-lime-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-lime-500/30">
+          <div className="w-16 h-16 rounded-2xl bg-lime-500 flex items-center justify-center shadow-lg shadow-lime-500/20">
             <CurrentIcon className="w-8 h-8 text-slate-950 stroke-[2.2]" />
           </div>
         </div>
@@ -59,7 +59,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ customMessage }) =
         {/* Progress Bar */}
         <div className="w-full bg-slate-900 rounded-full h-2.5 overflow-hidden border border-slate-800 mb-6">
           <div
-            className="bg-gradient-to-r from-lime-500 via-emerald-400 to-teal-400 h-full rounded-full transition-all duration-300 ease-out shadow-lg shadow-lime-500/30"
+            className="bg-lime-500 h-full rounded-full transition-all duration-300 ease-out shadow-md shadow-lime-500/20"
             style={{ width: `${progress}%` }}
           />
         </div>

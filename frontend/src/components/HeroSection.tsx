@@ -9,21 +9,21 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ onStartClick, onHowItWorksClick }) => {
   return (
     <div className="relative overflow-hidden pt-8 pb-14 lg:pt-16 lg:pb-20">
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-lime-500/15 to-emerald-500/10 blur-[130px] -z-10 rounded-full pointer-events-none" />
+      {/* Background Subtle Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[280px] bg-lime-500/10 blur-[130px] -z-10 rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           {/* Eyebrow Pill */}
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-lime-500/30 text-lime-400 text-xs sm:text-sm font-semibold mb-6 shadow-lg shadow-lime-500/10">
-            <Sparkles className="w-4 h-4 animate-spin-slow text-lime-400" />
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-lime-500/30 text-lime-400 text-xs sm:text-sm font-semibold mb-6 shadow-md shadow-lime-500/10">
+            <Sparkles className="w-4 h-4 text-lime-400" />
             <span>FITBUDDY — AI FITNESS PLAN GENERATOR</span>
           </div>
 
           {/* Main Title */}
           <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6">
             Train Smarter.{' '}
-            <span className="bg-gradient-to-r from-lime-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent">
+            <span className="text-lime-400">
               Eat Better.
             </span>{' '}
             Powered by AI.
@@ -38,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartClick, onHowItW
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <button
               onClick={onStartClick}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-lime-500 to-emerald-400 text-slate-950 font-bold text-base hover:from-lime-400 hover:to-emerald-300 shadow-xl shadow-lime-500/25 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer group"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-lime-500 text-slate-950 font-bold text-base hover:bg-lime-400 shadow-xl shadow-lime-500/20 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer group"
             >
               <span>Create My Fitness Plan</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

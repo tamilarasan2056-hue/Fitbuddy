@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onAdminClick, onHomeClick }) => 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Tagline */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={onHomeClick}>
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-lime-500 to-emerald-400 flex items-center justify-center text-slate-950 font-bold">
+            <div className="w-8 h-8 rounded-lg bg-lime-500 flex items-center justify-center text-slate-950 font-bold">
               <Dumbbell className="w-4 h-4 stroke-[2.5]" />
             </div>
             <div>

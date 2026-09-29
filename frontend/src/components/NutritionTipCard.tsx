@@ -28,13 +28,13 @@ export const NutritionTipCard: React.FC<NutritionTipCardProps> = ({ nutritionTip
   };
 
   return (
-    <div className="glass-panel rounded-2xl border border-lime-500/30 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-emerald-950/20 shadow-xl overflow-hidden mb-8">
+    <div className="glass-panel rounded-2xl border border-lime-500/30 bg-slate-900/90 shadow-xl overflow-hidden mb-8">
       <div 
         className="p-5 sm:p-6 flex items-center justify-between cursor-pointer border-b border-slate-800/80"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex items-center space-x-3.5">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-lime-500 to-emerald-400 flex items-center justify-center text-slate-950 shadow-md shadow-lime-500/20">
+          <div className="w-10 h-10 rounded-xl bg-lime-500 flex items-center justify-center text-slate-950 shadow-md shadow-lime-500/20">
             <Apple className="w-5 h-5 stroke-[2.2]" />
           </div>
           <div>

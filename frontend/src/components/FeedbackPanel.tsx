@@ -36,7 +36,7 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
   return (
     <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl my-8">
       <div className="flex items-center space-x-3 mb-3">
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-lime-500 to-emerald-400 flex items-center justify-center text-slate-950 shadow-md shadow-lime-500/20">
+        <div className="w-9 h-9 rounded-xl bg-lime-500 flex items-center justify-center text-slate-950 shadow-md shadow-lime-500/20">
           <MessageSquare className="w-4 h-4 stroke-[2.5]" />
         </div>
         <div>
@@ -90,7 +90,7 @@ export const FeedbackPanel: React.FC<FeedbackPanelProps> = ({
           className={`w-full sm:w-auto px-6 py-3 rounded-xl font-heading font-bold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer ${
             feedback.trim().length < 3 || isRegenerating
               ? 'bg-slate-800 text-slate-500 cursor-not-allowed'
-              : 'bg-gradient-to-r from-lime-500 to-emerald-400 text-slate-950 hover:from-lime-400 hover:to-emerald-300 shadow-lg shadow-lime-500/20'
+              : 'bg-lime-500 text-slate-950 hover:bg-lime-400 shadow-lg shadow-lime-500/20'
           }`}
         >
           {isRegenerating ? (

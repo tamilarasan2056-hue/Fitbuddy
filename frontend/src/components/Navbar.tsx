@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => handleNav('home')}
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-lime-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-lime-500/20 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-10 h-10 rounded-xl bg-lime-500 flex items-center justify-center shadow-lg shadow-lime-500/20 group-hover:scale-105 transition-transform duration-200">
               <Dumbbell className="w-5 h-5 text-slate-950 stroke-[2.5]" />
             </div>
             <div>

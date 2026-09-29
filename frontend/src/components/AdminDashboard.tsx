@@ -129,7 +129,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       <div className="max-w-md mx-auto px-4 py-16">
         <div className="glass-panel p-8 rounded-3xl border border-slate-800 shadow-2xl">
           <div className="text-center mb-6">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-400 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-amber-500/20">
+            <div className="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-amber-500/20">
               <Lock className="w-6 h-6 text-slate-950 stroke-[2.5]" />
             </div>
             <h2 className="font-heading text-2xl font-black text-white">Coach & Admin Portal</h2>
@@ -168,7 +168,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             <button
               type="submit"
               disabled={loginLoading}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-400 text-slate-950 font-bold text-sm hover:from-amber-400 hover:to-orange-300 transition-all cursor-pointer shadow-lg shadow-amber-500/20"
+              className="w-full py-3 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition-all cursor-pointer shadow-lg shadow-amber-500/20"
             >
               {loginLoading ? 'Authenticating...' : 'Access Admin Dashboard'}
             </button>
