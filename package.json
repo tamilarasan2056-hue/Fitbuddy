@@ -1,0 +1,23 @@
+{
+  "name": "fitbuddy-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FitBuddy — AI Fitness Plan Generator Full-Stack Platform",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "test:backend": "cd backend && .\\venv\\Scripts\\python -m pytest",
+    "backend": "cd backend && .\\venv\\Scripts\\python -m uvicorn app.main:app --reload --port 8000"
+  },
+  "keywords": [
+    "fitness",
+    "ai",
+    "gemini",
+    "workout-generator",
+    "fastapi",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}
