@@ -38,13 +38,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div>
               <div className="flex items-center space-x-1.5">
                 <span className="font-heading font-black text-xl tracking-tight text-slate-950">
-                  FIT<span className="text-blue-600">BUDDY</span>
+                  FITBUDDY
                 </span>
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200">
-                  <Sparkles className="w-2.5 h-2.5 mr-0.5" /> AI
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">
+                  <Sparkles className="w-2.5 h-2.5 mr-0.5 text-slate-500" /> AI
                 </span>
               </div>
-              <p className="text-[10px] text-slate-500 -mt-0.5 hidden sm:block">Powered by Gemini</p>
+              <p className="text-[10px] text-slate-500 -mt-0.5 hidden sm:block">Personalized Fitness Planner</p>
             </div>
           </div>
 

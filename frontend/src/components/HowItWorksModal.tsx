@@ -20,8 +20,8 @@ export const HowItWorksModal: React.FC<HowItWorksModalProps> = ({
         {/* Header */}
         <div className="p-6 border-b border-slate-200 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <span className="p-2 rounded-xl bg-blue-100 text-blue-700">
-              <Sparkles className="w-5 h-5 text-blue-600" />
+            <span className="p-2 rounded-xl bg-slate-100 text-slate-700">
+              <Sparkles className="w-5 h-5 text-slate-700" />
             </span>
             <div>
               <h3 className="font-heading font-black text-xl text-slate-950">How FitBuddy Works</h3>

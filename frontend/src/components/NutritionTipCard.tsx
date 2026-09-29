@@ -41,8 +41,8 @@ export const NutritionTipCard: React.FC<NutritionTipCardProps> = ({ nutritionTip
               <span className="font-heading font-bold text-lg text-slate-950">
                 Sports Nutrition & Recovery Strategy
               </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200">
-                <Sparkles className="w-2.5 h-2.5 mr-1 text-blue-600" /> Gemini Flash
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">
+                <Sparkles className="w-2.5 h-2.5 mr-1 text-slate-500" /> Gemini Flash
               </span>
             </div>
             <p className="text-xs text-slate-600 mt-0.5">

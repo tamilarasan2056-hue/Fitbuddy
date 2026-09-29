@@ -12,18 +12,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartClick, onHowItW
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           {/* Eyebrow Pill */}
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4 text-blue-600" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+            <Sparkles className="w-4 h-4 text-slate-500" />
             <span>FITBUDDY — AI FITNESS PLAN GENERATOR</span>
           </div>
 
-          {/* Main Title: Black words with blue accent */}
+          {/* Main Title: Solid black typography */}
           <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black text-slate-950 tracking-tight leading-[1.1] mb-6">
-            Train Smarter.{' '}
-            <span className="text-blue-600">
-              Eat Better.
-            </span>{' '}
-            Powered by AI.
+            Train Smarter. Eat Better. Powered by AI.
           </h1>
 
           {/* Subtitle */}
@@ -35,7 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartClick, onHowItW
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
             <button
               onClick={onStartClick}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-base hover:bg-blue-700 shadow-xl shadow-blue-600/25 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer group"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-base hover:bg-blue-700 shadow-md transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer group"
             >
               <span>Create My Fitness Plan</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

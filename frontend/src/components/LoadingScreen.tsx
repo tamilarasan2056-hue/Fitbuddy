@@ -36,11 +36,9 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ customMessage }) =
   return (
     <div className="max-w-xl mx-auto px-4 py-16 text-center text-slate-900">
       <div className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden">
-        {/* Central Pulse Icon */}
-        <div className="relative mx-auto w-24 h-24 mb-8 flex items-center justify-center">
-          <div className="absolute inset-0 rounded-full border-2 border-blue-500/20 animate-ping" />
-          <div className="absolute inset-2 rounded-full border border-blue-600/40 animate-spin-slow" />
-          <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+        {/* Central Icon */}
+        <div className="relative mx-auto w-20 h-20 mb-8 flex items-center justify-center">
+          <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-md">
             <CurrentIcon className="w-8 h-8 text-white stroke-[2.2]" />
           </div>
         </div>
@@ -49,7 +47,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ customMessage }) =
         <h3 className="font-heading text-2xl font-black text-slate-950 tracking-tight mb-2">
           {customMessage || 'Crafting Your Fitness Plan'}
         </h3>
-        <p className="text-sm text-blue-600 font-semibold mb-6">
+        <p className="text-sm text-slate-600 font-medium mb-6">
           {steps[currentStepIndex].text}
         </p>
 
