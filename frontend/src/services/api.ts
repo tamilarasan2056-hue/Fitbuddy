@@ -1,6 +1,7 @@
 import { UserProfile, WorkoutPlanResponse, AdminStats, RegisteredUser } from '../types';
-
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL !== undefined
+  ? import.meta.env.VITE_API_URL
+  : (import.meta.env.DEV ? 'http://localhost:8000' : '');
 
 class ApiError extends Error {
   status?: number;
@@ -82,7 +83,8 @@ export const api = {
 
   // Admin get all registered users
   async getRegisteredUsers(token: string, search?: string): Promise<RegisteredUser[]> {
-    const url = new URL(`${API_BASE_URL}/api/users`);
+    const baseUrl = API_BASE_URL || (typeof window !== 'undefined' ? window.location.origin : '');
+    const url = new URL(`${baseUrl}/api/users`, baseUrl || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000'));
     if (search) url.searchParams.set('search', search);
     const res = await fetch(url.toString(), {
       headers: { Authorization: `Bearer ${token}` },

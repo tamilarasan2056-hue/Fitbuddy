@@ -28,6 +28,10 @@ def test_health_endpoint():
     assert data["status"] == "healthy"
     assert data["database"] == "connected"
 
+    api_response = client.get("/api/health")
+    assert api_response.status_code == 200
+    assert api_response.json()["status"] == "healthy"
+
 
 def test_generate_workout_validation():
     # Missing required fields

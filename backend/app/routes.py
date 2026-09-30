@@ -47,6 +47,7 @@ def root():
 
 
 @router.get("/health")
+@router.get("/api/health")
 def health_check(db: Session = Depends(get_db)):
     try:
         # Test database connection

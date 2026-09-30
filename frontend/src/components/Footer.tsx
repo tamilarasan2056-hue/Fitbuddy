@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ onAdminClick, onHomeClick }) => 
               Admin & Coach View
             </button>
             <a
-              href="http://localhost:8000/docs"
+              href="/docs"
               target="_blank"
               rel="noreferrer"
               className="hover:text-blue-600 transition-colors"
